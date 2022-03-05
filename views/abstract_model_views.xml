@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="doc_abstract_action" model="ir.actions.act_window">
+        <field name="name">Abstract</field>
+        <field name="res_model">doc.abstract</field>
+        <field name="view_mode">form,tree,kanban</field>
+    </record>
+
+    <record id="doc_abstract_form" model="ir.ui.view">
+        <field name="name">doc.abstract.form</field>
+        <field name="model">doc.abstract</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<!-- Menu root  -->
+    <menuitem
+        id="doc_abstract_root"
+        name="Abstract Model"
+        parent="main_menu"
+        sequence="1"
+        action="doc_abstract_action"
+    />
+
+</odoo>

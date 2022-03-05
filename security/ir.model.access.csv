@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_create,perm_read,perm_write,perm_unlink
+acl_main,main_form default,model_main_form,,1,1,1,1
+acl_config,config default,model_config,,1,1,1,1
+acl_abstract,doc_abstract default,model_doc_abstract,,1,1,1,1

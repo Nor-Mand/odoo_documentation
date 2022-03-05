@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="configuration_action" model="ir.actions.act_window">
+        <field name="name">Settings</field>
+        <field name="res_model">config</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="configuration_form" model="ir.ui.view">
+        <field name="name">configuration.form</field>
+        <field name="model">config</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<!-- Menu root  -->
+    <menuitem
+        id="config_root"
+        name="Configuration"
+        parent="main_root"
+        sequence="10"
+    />
+    <menuitem
+        id="setting_menu"
+        name="Settings"
+        parent="config_root"
+        sequence="0"
+        action="configuration_action"
+    />
+    <menuitem
+        id="models_menu"
+        name="Models"
+        parent="config_root"
+        sequence="15"
+    />
+        <menuitem
+        id="abstract_menu"
+        name="Abstract"
+        parent="models_menu"
+        sequence="0"
+        action="configuration_action"
+    />
+</odoo>

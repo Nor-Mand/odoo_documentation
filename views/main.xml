@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<odoo>
+    <record id="main_action" model="ir.actions.act_window">
+        <field name="name">Main</field>
+        <field name="res_model">main.form</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="main_form" model="ir.ui.view">
+        <field name="name">main.form</field>
+        <field name="model">main.form</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <group>
+                            <field name="last_name"/>
+                        </group>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+<!-- Menu root   -->
+    <menuitem
+        id="main_root"
+        name="Documentation"
+    />
+    <menuitem
+        id="main_menu"
+        name="ORM API"
+        parent="main_root"
+        action="main_action"
+    />
+</odoo>
